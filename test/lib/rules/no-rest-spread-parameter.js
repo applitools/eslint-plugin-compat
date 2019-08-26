@@ -7,7 +7,7 @@
 'use strict';
 
 const { RuleTester } = require('eslint');
-const rule = require('../../../lib/rules/no-rest-parameter');
+const rule = require('../../../lib/rules/no-rest-spread-parameter');
 
 const config = {
     parser: 'babel-eslint',
@@ -19,7 +19,7 @@ const config = {
 
 const ruleTester = new RuleTester(config);
 
-ruleTester.run('no-rest-parameter', rule, {
+ruleTester.run('no-rest-spread-parameter', rule, {
     valid: [
         {
             code: `function foo(a, b) { console.log(a, b); }`,
@@ -34,6 +34,14 @@ ruleTester.run('no-rest-parameter', rule, {
             errors: [
                 {
                     message: 'Invalid usage of rest parameter.',
+                },
+            ],
+        },
+        {
+            code: `const arr = ['foo', ...otherArr]`,
+            errors: [
+                {
+                    message: 'Invalid usage of spread operator.',
                 },
             ],
         },

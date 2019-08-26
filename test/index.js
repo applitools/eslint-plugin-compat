@@ -46,7 +46,7 @@ describe('rules documentation', () => {
 
         it(`should have an entry in README.md for "${ruleName}"`, () => {
             assert(
-                README_CONTENT.includes(`| [lwc/${ruleName}](./docs/rules/${ruleName}.md)`),
+                README_CONTENT.includes(`| [compat/${ruleName}](./docs/rules/${ruleName}.md)`),
                 `Rule "${ruleName}" is not listed in the README.md.`,
             );
         });

@@ -1,13 +1,11 @@
 {
-  "name": "@lwc/eslint-plugin-lwc",
+  "name": "@applitools/eslint-plugin-compat",
   "version": "0.7.0",
   "license": "MIT",
-  "description": "Official ESLint rules for LWC",
+  "description": "ESLint rules for IE, based on Salesforce LWC rules",
   "keywords": [
     "eslint",
-    "eslint-plugin",
-    "lwc",
-    "salesforce"
+    "eslint-plugin"
   ],
   "main": "lib/index.js",
   "scripts": {
@@ -30,7 +28,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/salesforce/eslint-plugin-lwc.git"
+    "url": "https://github.com/applitools/eslint-plugin-compat.git"
   },
   "engines": {
     "node": ">=8.0.0"
